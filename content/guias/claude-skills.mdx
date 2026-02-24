@@ -1,0 +1,676 @@
+---
+titulo: "Guía de Claude Skills: Enséñale a Claude tu forma de trabajar"
+descripcion: "Aprende qué son los Skills de Claude, cómo activarlos y cómo crear los tuyos para automatizar tareas repetitivas."
+categoria: "Productividad"
+minutosLectura: 16
+autor: "Inicia con IA"
+thumbnail: "/guias/imagenes/claude-skills-thumbnail.jpg"
+---
+
+<Intro>
+Imagina que cada vez que le pides algo a Claude, tuvieras que explicarle desde cero cómo quieres que lo haga. El tono que usas, los colores de tu marca, el formato de tus reportes, las reglas de tu negocio... una y otra vez.
+
+Cansado, ¿verdad?
+
+Para eso existen los Skills (habilidades). Son como "manuales de instrucciones" que le das a Claude para que aprenda a hacer tareas específicas a tu manera — y las repita perfectamente cada vez que las necesites.
+
+¿Quieres que Claude siempre cree presentaciones con los colores de tu marca? Hay un Skill para eso. ¿Que genere reportes en Excel con un formato específico? También. ¿Que siga el tono de comunicación de tu empresa al escribir? Lo puedes crear tú mismo.
+
+Lo mejor: una vez que Claude tiene un Skill, lo usa automáticamente cuando detecta que es relevante. No tienes que pedírselo. Él solito sabe cuándo aplicarlo.
+
+En esta guía vas a aprender qué son los Skills, cómo activarlos, cuáles ya vienen incluidos, y — lo más poderoso — cómo crear los tuyos propios desde cero.
+</Intro>
+
+<Seccion titulo="¿Qué son los Skills de Claude?" numero={1}>
+
+Piénsalo así: cuando contratas a un empleado nuevo, no le dices todo desde cero cada día. Le das un manual, le explicas los procesos, y después él ya sabe cómo hacer las cosas.
+
+Los Skills funcionan exactamente igual, pero con Claude.
+
+Un Skill es una carpeta con instrucciones que le dice a Claude cómo hacer una tarea específica. Esa carpeta puede incluir:
+
+**Instrucciones escritas** → qué hacer y cómo hacerlo
+
+**Reglas y restricciones** → qué evitar, qué formatos usar
+
+**Recursos de referencia** → archivos, plantillas, ejemplos
+
+**Scripts opcionales** → código que Claude puede ejecutar para tareas más avanzadas
+
+Cuando tú le pides algo a Claude, él revisa automáticamente todos los Skills disponibles y decide cuáles son relevantes para tu tarea. Si detecta que uno aplica, lo carga y lo usa — sin que tú tengas que hacer nada extra.
+
+**¿Quién puede usar Skills?**
+
+Los Skills están disponibles para todos los usuarios de Claude, incluyendo el plan gratuito. Solo necesitas tener activada la opción de "Ejecución de código y creación de archivos" en tu configuración. Los planes de pago (Pro, Max, Team y Enterprise) tienen acceso completo, incluyendo la posibilidad de subir Skills personalizados.
+
+**Los 3 tipos de Skills**
+
+**1. Skills incluidos de Anthropic**
+
+Son los que ya vienen listos para usar. Claude los utiliza para crear documentos de Word, presentaciones de PowerPoint, hojas de cálculo de Excel y PDFs. Solo tienes que pedirle a Claude que cree un archivo y él usa el Skill correspondiente automáticamente.
+
+**2. Skills de partners**
+
+Son Skills creados por empresas como Notion, Figma, Atlassian (Jira/Trello), Canva, Stripe y Zapier. Están diseñados para que Claude trabaje mejor con esas herramientas. Los encuentras en el Directorio de Skills.
+
+**3. Skills personalizados (los tuyos)**
+
+Estos son los más poderosos. Tú los creas según tus necesidades: las reglas de tu marca, el formato de tus reportes, el flujo de tu negocio. Son totalmente personalizables y no necesitas saber programar para hacerlos.
+
+**Skills vs Prompts vs Proyectos: ¿cuál es la diferencia?**
+
+Seguro te estás preguntando: "¿Y esto no es lo mismo que escribir un buen prompt o usar un Proyecto de Claude?" No. Son cosas diferentes, y cada una tiene su lugar.
+
+**Skills** aportan conocimiento especializado (procesos, reglas, flujos de trabajo). Persisten en todas tus conversaciones, contienen instrucciones + código + recursos, y se activan automáticamente cuando Claude los necesita. Pueden incluir código y son ideales para tareas repetitivas que requieren expertise específico.
+
+**Prompts** son instrucciones puntuales para una tarea específica. Solo viven en la conversación actual, contienen texto en lenguaje natural, y se activan cada vez que tú los escribes. No incluyen código y son ideales para peticiones rápidas y únicas.
+
+**Proyectos** aportan contexto general y documentos de referencia. Están disponibles dentro del proyecto, contienen documentos + contexto, y siempre están presentes dentro del proyecto. No incluyen código y son ideales para tener contexto centralizado para un tema.
+
+Piénsalo así:
+
+Un **prompt** es como darle una instrucción verbal a alguien: "Hazme esto así."
+
+Un **proyecto** es como darle documentos de referencia: "Lee esto para que entiendas el contexto."
+
+Un **Skill** es como darle un manual de procedimientos: "Así es como hacemos las cosas aquí, siempre."
+
+Los tres se complementan. Puedes tener un Proyecto con tus documentos de marca, un Skill que aplique esas reglas automáticamente, y usar prompts para hacer peticiones específicas. Juntos, hacen que Claude trabaje exactamente como tú necesitas.
+
+</Seccion>
+
+<Seccion titulo="Cómo activar los Skills" numero={2}>
+
+Activar los Skills es muy sencillo. Solo sigue estos pasos:
+
+**Paso 1: Abre la configuración de Claude**
+
+Ve a claude.ai y haz clic en tu nombre o ícono de perfil en la esquina inferior izquierda. Selecciona "Settings" (Configuración).
+
+**Paso 2: Activa "Ejecución de código y creación de archivos"**
+
+En la sección de Capabilities (Capacidades), busca la opción que dice "Code execution and file creation" y actívala. Esta es la base que necesitan los Skills para funcionar.
+
+<Imagen src="/guias/imagenes/claude-skills-activar-settings.png" alt="Configuración de Code execution and file creation en Claude" caption="Activa esta opción para que los Skills funcionen" />
+
+**Paso 3: Revisa los Skills individuales**
+
+En la misma sección de Capabilities, verás la lista de Skills disponibles. Puedes activar o desactivar cada uno según lo que necesites.
+
+<Imagen src="/guias/imagenes/claude-skills-toggles-detalle.png" alt="Toggles individuales de Skills en la configuración de Claude" caption="Puedes activar o desactivar cada Skill individualmente" />
+
+**Paso 4 (opcional): Activa la creación avanzada de archivos**
+
+Si quieres que Claude sea aún mejor trabajando con documentos, ve a Settings > Features > Experimental y activa "Upgraded file creation and analysis". Esto le da a Claude herramientas extra para crear archivos de mayor calidad.
+
+¡Listo! Con esto, Claude ya puede usar los Skills automáticamente cuando los necesite.
+
+</Seccion>
+
+<Seccion titulo="Skills incluidos: los que ya vienen listos" numero={3}>
+
+Claude ya viene con varios Skills incluidos que puedes usar de inmediato. No tienes que configurar nada — solo pídele que haga la tarea y él activa el Skill correcto automáticamente.
+
+Estos son los principales:
+
+**📊 Skill de Excel (xlsx)**
+
+Claude puede crear hojas de cálculo completas con fórmulas, formato, gráficas y múltiples hojas. Ideal para presupuestos, inventarios, bases de datos, reportes y más.
+
+**📑 Skill de PowerPoint (pptx)**
+
+Claude crea presentaciones profesionales con diseño, estructura y contenido. Perfecto para pitch decks, reportes trimestrales o presentaciones de equipo.
+
+**📝 Skill de Word (docx)**
+
+Claude genera documentos de Word con formato profesional: títulos, subtítulos, tablas, numeración de páginas y estructura completa.
+
+**📋 Skill de PDF**
+
+Claude puede leer PDFs, extraer información, llenar formularios y manipular archivos PDF existentes.
+
+Cada uno de estos Skills tiene sus propias reglas internas sobre cómo crear archivos de calidad profesional. Es como si Claude hubiera tomado un curso avanzado de Excel, PowerPoint, Word y PDF — y ahora aplica todo ese conocimiento cada vez que le pides un archivo.
+
+**¿Cómo se usan?**
+
+Solo tienes que pedirle a Claude lo que necesitas. Por ejemplo:
+
+"Crea una hoja de cálculo para controlar los gastos mensuales de mi negocio. Incluye columnas para fecha, concepto, categoría, monto y una fórmula que sume el total por categoría."
+
+Claude detectará que necesita el Skill de Excel y lo activará automáticamente. Tú solo descargas el archivo y listo.
+
+<Imagen src="/guias/imagenes/claude-skills-excel-ejemplo.png" alt="Claude creando un archivo Excel con el Skill activado" caption="Claude genera hojas de cálculo profesionales automáticamente" />
+
+<Prompt titulo="Presupuesto en Excel">
+Crea una hoja de Excel con un presupuesto mensual para un negocio pequeño. Categorías: renta, nómina, marketing, servicios. Incluye fórmulas de totales por categoría y total general.
+</Prompt>
+
+<Prompt titulo="CRM simple en Excel">
+Crea una hoja de Excel que funcione como CRM básico: nombre del cliente, email, teléfono, última interacción, estado del lead (frío/tibio/caliente) y notas.
+</Prompt>
+
+<Prompt titulo="Extraer info de un PDF">
+Lee este PDF y dame un resumen de los puntos clave. Organiza la información por temas.
+</Prompt>
+
+<Prompt titulo="Propuesta comercial en Word">
+Crea un documento de Word con una propuesta comercial para [tu servicio]. Incluye: resumen ejecutivo, servicios, metodología, cronograma e inversión.
+</Prompt>
+
+<Alerta tipo="tip">
+**Tip de la Metodología INICIA:** Estos prompts usan los pasos de Identifica (objetivo claro) e Indica (formato específico). Si quieres resultados aún mejores, agrega contexto con Nutre — por ejemplo: "Soy dueño de una cafetería con 5 empleados" — y restricciones con Controla — por ejemplo: "Solo fórmulas básicas como SUMA y PROMEDIO, nada complejo."
+</Alerta>
+
+</Seccion>
+
+<Seccion titulo="El Directorio de Skills: habilidades de partners" numero={4}>
+
+Además de los Skills incluidos, Claude tiene un Directorio de Skills con habilidades creadas por empresas tecnológicas conocidas. Estos Skills están diseñados para que Claude trabaje mejor con herramientas específicas que probablemente ya usas.
+
+**¿Dónde encontrarlo?**
+
+Puedes explorar el Directorio en claude.com/connectors. Ahí verás todos los Skills de partners disponibles.
+
+<Imagen src="/guias/imagenes/claude-skills-directorio-partners.png" alt="Directorio de Skills y Conectores en Claude" caption="Encuentra Skills de partners en la sección de Conectores de Claude" />
+
+**Algunos destacados:**
+
+**Notion** — Claude trabaja directamente con tu contenido de Notion: crea páginas, organiza información y genera resúmenes de bases de datos.
+
+**Canva** — Claude entiende cómo crear campañas de marketing en Canva, presentaciones con tu marca y traducir contenido entre formatos.
+
+**Atlassian (Jira / Confluence)** — Claude convierte especificaciones en tareas de Jira, genera reportes de estado y busca información en Confluence. Muy útil para equipos de trabajo.
+
+**Figma** — Claude puede entender diseños de Figma y traducirlos a código con mayor precisión y consistencia.
+
+**Zapier** — Claude puede ayudarte a crear y gestionar automatizaciones con Zapier, conectando tus herramientas favoritas.
+
+**¿Cómo funcionan?**
+
+La mayoría de estos Skills funcionan junto con los Conectores MCP — que son herramientas que conectan a Claude con servicios externos. Es decir, necesitas tener instalado el conector de la herramienta para que el Skill pueda interactuar con ella.
+
+Piénsalo así:
+
+El **conector MCP** es la "puerta" que conecta a Claude con Notion (o Canva, o Jira...)
+
+El **Skill** es el "manual" que le dice a Claude qué hacer una vez conectado
+
+Juntos, hacen que Claude no solo se conecte con tus herramientas, sino que sepa usarlas de la mejor manera.
+
+</Seccion>
+
+<Seccion titulo="Cómo crear tu propio Skill personalizado" numero={5}>
+
+Aquí es donde las cosas se ponen realmente interesantes. Puedes crear tus propios Skills para que Claude trabaje exactamente como tú necesitas.
+
+Y lo mejor: no necesitas saber programar.
+
+Hay dos formas de crear un Skill:
+
+**Opción A: Pedirle a Claude que lo cree por ti (la más fácil)**
+
+Esta es la forma que recomendamos si estás empezando. Solo describe lo que necesitas y Claude construye el Skill por ti.
+
+**Paso 1:** Abre una conversación nueva con Claude.
+
+**Paso 2:** Describe lo que quieres. Por ejemplo:
+
+"Ayúdame a crear un Skill para aplicar la guía de marca de mi empresa. Mis colores son azul (#0F172A) y celeste (#3B82F6), mi tipografía es Poppins para títulos y Calibri para texto, y mi tono es profesional pero cercano."
+
+**Paso 3:** Claude te hará algunas preguntas para entender mejor tu necesidad (qué tipo de documentos creas, qué reglas son más importantes, etc.).
+
+**Paso 4:** Claude generará el Skill completo como un archivo ZIP que puedes descargar.
+
+**Paso 5:** Ve a Settings > Capabilities > Skills y haz clic en "Upload skill". Sube el archivo ZIP que descargaste.
+
+**Paso 6:** ¡Listo! Tu Skill aparecerá en la lista y Claude lo usará automáticamente cuando sea relevante.
+
+<Imagen src="/guias/imagenes/claude-skills-crear-conversacion.png" alt="Conversación con Claude para crear un Skill personalizado" caption="Solo describe lo que necesitas y Claude construye el Skill por ti" />
+
+**Opción B: Crearlo manualmente (más control)**
+
+Si quieres tener control total, puedes crear el Skill tú mismo. Es más simple de lo que parece.
+
+Un Skill es simplemente una carpeta que contiene un archivo llamado SKILL.md. Eso es todo lo obligatorio.
+
+La estructura se ve así:
+
+```
+mi-skill/
+├── SKILL.md          ← El archivo principal (obligatorio)
+├── recursos/         ← Carpeta opcional con archivos de referencia
+│   └── ejemplos.md
+```
+
+El archivo SKILL.md tiene dos partes:
+
+**Parte 1: La metadata (el encabezado)**
+
+Va al inicio del archivo, entre tres guiones (---). Le dice a Claude cómo se llama tu Skill y cuándo usarlo:
+
+```
+---
+name: guia-de-marca-miempresa
+description: Aplica los colores, tipografía y tono de voz de MiEmpresa a todos los documentos, presentaciones y materiales.
+---
+```
+
+Dos campos obligatorios:
+
+**name:** El nombre de tu Skill (máximo 64 caracteres). Importante: solo minúsculas, números y guiones (-). Nada de espacios, mayúsculas ni caracteres especiales.
+
+**description:** Qué hace y cuándo usarlo (máximo 200 caracteres)
+
+La descripción es la parte más importante. Es lo que Claude lee para decidir si tu Skill aplica o no a una tarea. Si es vaga, Claude podría no activarlo cuando debería.
+
+**Parte 2: Las instrucciones**
+
+Después de la metadata, escribes las instrucciones en texto normal (formato Markdown). Aquí va todo lo que Claude necesita saber.
+
+**Ejemplo completo de un SKILL.md:**
+
+```markdown
+---
+name: tono-de-marca-miempresa
+description: Aplica el tono de voz y estilo de escritura de MiEmpresa a todo contenido escrito, emails y comunicaciones.
+---
+
+# Tono de Marca MiEmpresa
+
+## Reglas de Escritura
+- Tono: Profesional pero cercano. Como un amigo experto.
+- Tratamiento: Siempre de "tú", nunca de "usted".
+- Frases: Cortas y directas. Máximo 20 palabras por oración.
+- Evitar: Jerga técnica, anglicismos innecesarios, tono frío.
+- Preferir: Ejemplos concretos, metáforas simples, lenguaje cotidiano.
+
+## Palabras a Evitar
+- "Sinergias", "paradigma", "apalancamiento"
+- "Estimado cliente" (usar el nombre de la persona)
+- "Le informamos que..." (ir directo al punto)
+
+## Palabras Preferidas
+- "Imagina que...", "Piénsalo así..."
+- "Lo importante es...", "En resumen..."
+
+## Estructura de Emails
+1. Saludo breve con nombre
+2. Ir al punto en la primera oración
+3. Contexto solo si es necesario (máximo 2 líneas)
+4. Llamado a acción claro
+5. Despedida corta
+
+## Ejemplo Correcto
+"Hola María,
+
+Te comparto la propuesta que platicamos ayer.
+Lo más importante está en la página 3.
+
+¿La revisamos juntos el jueves a las 10am?
+
+Saludos,
+Carlos"
+
+## Ejemplo Incorrecto
+"Estimada Sra. García,
+
+Por medio de la presente le informamos que hemos
+finalizado la elaboración de la propuesta comercial
+que fue solicitada en la reunión del día..."
+```
+
+**Para subir tu Skill:**
+
+1. Guarda tu archivo SKILL.md dentro de una carpeta
+2. Comprime la carpeta como archivo ZIP
+3. Ve a Settings > Capabilities > Skills > Upload Skill
+4. Sube el ZIP
+
+<Imagen src="/guias/imagenes/claude-skills-subir-upload.png" alt="Sección de Skills en Settings con botón Add y Skill personalizado subido" caption="Tus Skills personalizados aparecen en la lista listos para usar" />
+
+¡Tu Skill ya está activo!
+
+<Prompt titulo="Skill de guía de marca">
+Ayúdame a crear un Skill que aplique la guía de marca de mi empresa a todos los documentos. Mis colores son [colores], mi tipografía es [fuente] y mi tono es [descripción del tono].
+</Prompt>
+
+<Prompt titulo="Skill de reportes">
+Crea un Skill para generar reportes semanales con este formato: resumen ejecutivo, métricas clave, problemas y acciones siguientes.
+</Prompt>
+
+<Prompt titulo="Skill de emails de ventas">
+Necesito un Skill de emails de ventas que siga este estilo: [pega un ejemplo de email que te guste].
+</Prompt>
+
+<Prompt titulo="Skill de redes sociales">
+Quiero un Skill para crear contenido de redes sociales. Mi marca tiene tono [tu tono], mi audiencia es [tu audiencia], y publico en [plataformas].
+</Prompt>
+
+<Prompt titulo="Skill de procesos">
+Ayúdame a crear un Skill con el checklist de onboarding de clientes nuevos. Mis pasos son: [lista tus pasos].
+</Prompt>
+
+<Alerta tipo="tip">
+**Tip de la Metodología INICIA:** Crear un Skill es básicamente escribir un prompt permanente. Los mismos pasos que usas para escribir buenos prompts aplican perfecto aquí. Nutre con contexto (dale toda la información de tu marca, tu proceso, tu estilo) y Controla con restricciones (dile qué evitar, qué límites respetar). Cuanto más detallado seas, mejor resultados te dará el Skill cada vez que se active.
+</Alerta>
+
+</Seccion>
+
+<Seccion titulo="3 Skills listos para usar" numero={6}>
+
+Para que no te quedes solo con la teoría, preparamos 3 Skills que puedes usar ahora mismo. Dos vienen listos para descargar y subir a Claude, y el tercero lo vamos a construir juntos paso a paso para que veas exactamente cómo se hace.
+
+<Alerta tipo="tip">
+**Tip:** Puedes tener los 3 activos al mismo tiempo. Claude los combina automáticamente cuando una tarea lo requiere. Por ejemplo, si le pides "crea un post para redes sociales con mi marca", usará el Skill de Redes Sociales Y el de Guía de Marca juntos.
+</Alerta>
+
+**📥 SKILL 1: Guía de Marca (descargable)**
+
+[📥 Descargar Skill de Guía de Marca](https://drive.google.com/file/d/1QVdcbqZF0ea5BJgNw2Y3L6JRJqtyObtv/view?usp=sharing)
+
+**El problema:** Cada vez que le pides a Claude que cree algo para tu negocio — un email, un documento, una presentación — tienes que recordarle los colores, el tono, la tipografía. Es repetitivo y fácil que algo quede inconsistente.
+
+**La solución:** Un Skill que tenga toda tu identidad de marca. Claude lo aplica automáticamente a todo lo que cree.
+
+**Qué incluye este Skill:**
+
+Colores principales y secundarios con códigos hex. Tipografías para títulos y cuerpo. Reglas de tono de voz completas. Listas de palabras a usar y evitar. Reglas específicas para documentos, presentaciones y emails. Ejemplos de "así sí" y "así no". Sección de personalización paso a paso.
+
+**¿Cómo usarlo?**
+
+1. Descarga el archivo ZIP
+2. Abre el SKILL.md con cualquier editor de texto (Bloc de Notas, TextEdit, VS Code, lo que tengas)
+3. Busca los recuadros que dicen "⚠️ PERSONALIZA" y reemplaza con los datos de tu marca
+4. Guarda, vuelve a comprimir como ZIP
+5. Ve a Settings > Capabilities > Skills > Upload Skill y sube el ZIP
+
+<Alerta tipo="tip">
+**Tip:** Incluye ejemplos reales de textos de tu marca que te gusten. Claude entiende mucho mejor con ejemplos concretos que con reglas abstractas — esto es el paso Ilustra de la Metodología INICIA aplicado a tu Skill.
+</Alerta>
+
+**📥 SKILL 2: Contenido para Redes Sociales (descargable)**
+
+[📥 Descargar Skill de Contenido para Redes Sociales](https://drive.google.com/file/d/1PnoJBx9Q_bw3FEpFHwFhKwmc-D3qDyGL/view?usp=drive_link)
+
+**El problema:** Generar contenido consistente para redes sociales toma tiempo. Cada vez que le pides ideas a Claude, tienes que explicarle tu estilo, tu audiencia, el formato que usas, los hashtags que prefieres...
+
+**La solución:** Un Skill que tenga tu estrategia de contenido completa. Claude genera publicaciones que suenan a ti desde el primer intento.
+
+**Qué incluye este Skill:**
+
+Estructura base de publicaciones: Gancho → Valor → CTA. Fórmulas de ganchos que funcionan (7 tipos diferentes). Reglas específicas por plataforma: Instagram, LinkedIn, TikTok y Facebook. Guía completa de hashtags (cuántos, qué tipo, dónde ponerlos). Reglas de emojis por plataforma. Tipos de CTA según tu objetivo (engagement, guardar, compartir, venta). Formato de entrega organizado y plantilla de calendario editorial.
+
+**¿Cómo usarlo?**
+
+Mismo proceso: descarga, personaliza el SKILL.md con tu audiencia y tono, comprime y sube.
+
+<Alerta tipo="tip">
+**Tip:** Agrega 3-5 publicaciones tuyas que hayan tenido buenos resultados. Claude las usará como referencia de estilo y tono para todo lo que genere.
+</Alerta>
+
+**🛠️ SKILL 3: Reportes Semanales (lo hacemos juntos paso a paso)**
+
+[📥 ¿Prefieres descargarlo directo? Descargar Skill de Reportes Semanales](https://drive.google.com/file/d/1vUxx_j2YqOBe9cvbDkOnPuXHS1q2nRMG/view?usp=sharing)
+
+Ahora viene lo bueno. Vamos a crear un Skill desde cero — tú y yo — para que veas exactamente cómo funciona el proceso. Cuando terminemos, vas a tener un Skill de Reportes Semanales listo para usar.
+
+**Lo que vamos a construir:** Un Skill que le diga a Claude cómo armar tus reportes semanales. Tú solo le das los datos de la semana y Claude arma todo con formato profesional, tablas de KPIs y estructura consistente.
+
+**Lo que necesitas:** Un editor de texto (Bloc de Notas, TextEdit, Word, lo que tengas) y 10 minutos.
+
+**Paso 1: Crea la carpeta**
+
+Crea una carpeta nueva en tu computadora y nómbrala: reportes-semanales
+
+Dentro de esa carpeta, crea un archivo de texto nuevo y nómbralo: SKILL.md
+
+Eso es todo lo que necesitas. Una carpeta con un archivo adentro.
+
+```
+reportes-semanales/
+└── SKILL.md
+```
+
+**Paso 2: Escribe la metadata**
+
+Abre tu archivo SKILL.md y escribe esto al inicio. Es el "encabezado" que le dice a Claude cómo se llama tu Skill y cuándo activarlo:
+
+```
+---
+name: reportes-semanales
+description: Genera reportes semanales con formato estándar incluyendo resumen ejecutivo, KPIs, logros, problemas detectados, plan de acción y próximos pasos.
+---
+```
+
+Importante: Los tres guiones (---) al inicio y al final son obligatorios. Es la forma en que Claude identifica la metadata.
+
+<Alerta tipo="warning">
+**Cuidado:** El nombre solo puede tener letras minúsculas, números y guiones (-). Nada de espacios, mayúsculas, acentos ni caracteres especiales. Si pones "Reportes Semanales" en lugar de "reportes-semanales", Claude te dará un error al subir el Skill.
+</Alerta>
+
+**Paso 3: Escribe el título y las instrucciones generales**
+
+Debajo de la metadata, escribe:
+
+```markdown
+# Reportes Semanales
+
+## CUÁNDO USAR ESTE SKILL
+Activa este Skill cuando el usuario pida:
+- Un reporte semanal
+- Un informe de la semana
+- Un update semanal
+- Un reporte de avance
+```
+
+Esto le aclara a Claude en qué situaciones debe usar tu Skill. Mientras más específico seas, mejor.
+
+**Paso 4: Define la estructura del reporte**
+
+Ahora viene la parte más importante: decirle a Claude exactamente qué secciones debe tener el reporte y en qué orden. Agrega esto:
+
+```markdown
+## ESTRUCTURA DEL REPORTE
+
+Todo reporte semanal debe tener estas secciones, en este orden:
+
+### 1. Encabezado
+Incluir:
+- Nombre del área o proyecto
+- Semana (fecha de inicio a fecha de fin)
+- Quién lo elaboró
+
+### 2. Resumen Ejecutivo
+Máximo 3-4 oraciones que respondan: "¿Cómo estuvo la semana?"
+Incluir: estado general, logro más importante, problema más relevante
+(si hubo), y qué se espera la próxima semana.
+
+### 3. Métricas Clave (KPIs)
+Presentar en formato de tabla:
+
+| KPI | Actual | Meta | Status | vs semana anterior |
+|-----|--------|------|--------|-------------------|
+| [Métrica] | [valor] | [meta] | ✅/⚠️/🔴 | ↑/↓/= [%] |
+
+Reglas:
+- Máximo 5-8 KPIs (solo los más relevantes)
+- Siempre comparar vs semana anterior
+- Usar ✅ (en meta), ⚠️ (por debajo) y 🔴 (crítico)
+
+### 4. Logros de la Semana
+Lista con viñetas. Máximo 5-7 logros.
+Cada logro en una oración con impacto concreto.
+Ejemplo: "✅ Se cerró proyecto web — 2 días antes del deadline"
+
+### 5. Problemas y Bloqueos
+Cada problema debe incluir:
+- Qué pasó
+- Qué impacto tiene
+- Qué acción se está tomando
+
+Si no hubo problemas: "Sin problemas críticos esta semana."
+
+### 6. Plan para la Próxima Semana
+Tabla de prioridades:
+
+| Prioridad | Tarea | Responsable | Fecha límite |
+|-----------|-------|-------------|-------------|
+| 🔴 Alta | [tarea] | [persona] | [fecha] |
+| 🟡 Media | [tarea] | [persona] | [fecha] |
+
+Máximo 7-10 tareas, ordenadas por prioridad.
+
+### 7. Notas Adicionales (opcional)
+Cambios en el equipo, reconocimientos, vacaciones próximas,
+o cualquier contexto relevante.
+```
+
+**Paso 5: Agrega reglas de estilo**
+
+Para que Claude no solo ponga la información correcta sino que la escriba bien, agrega reglas de tono y formato:
+
+```markdown
+## REGLAS DE ESTILO
+
+### Tono
+- Profesional y directo
+- Datos concretos, no opiniones vagas
+- "Las ventas bajaron 12%" > "Las ventas no estuvieron tan bien"
+
+### Formato
+- Tablas para datos numéricos
+- Viñetas para listas
+- Negritas para destacar lo importante
+- Secciones breves y escaneables
+
+### Extensión
+- Reporte completo: 1-2 páginas máximo
+- Resumen ejecutivo: 3-4 oraciones
+- Cada sección debe leerse en menos de 30 segundos
+```
+
+**Paso 6 (Opcional): Agrega un ejemplo**
+
+Si quieres que tu Skill sea aún mejor, incluye un ejemplo de cómo se ve un buen resultado vs un mal resultado:
+
+```markdown
+## EJEMPLO DE RESUMEN EJECUTIVO
+
+### ✅ Bien escrito:
+"Buena semana en general. Se cerró el proyecto de rediseño web
+2 días antes del deadline. El equipo de ventas reporta una caída
+del 15% en leads — estamos investigando la causa. La próxima semana
+nos enfocamos en el lanzamiento de la campaña de marzo."
+
+### ❌ Mal escrito:
+"Esta semana se realizaron diversas actividades enfocadas en el
+cumplimiento de los objetivos establecidos en el plan operativo
+trimestral. Se lograron avances significativos en varios frentes
+de trabajo que serán detallados a continuación."
+```
+
+¿Ves la diferencia? El primero va al punto con datos. El segundo no dice nada concreto. Este tipo de ejemplos le enseñan a Claude exactamente qué estilo quieres.
+
+**Paso 7: Guarda, comprime y sube**
+
+1. Guarda tu archivo SKILL.md
+2. Comprime la carpeta reportes-semanales como archivo ZIP
+3. Ve a Claude: Settings > Capabilities > Skills > Upload Skill
+4. Sube el ZIP
+
+¡Tu Skill ya está activo! 🎉
+
+**Paso 8: Pruébalo**
+
+Abre una conversación nueva con Claude y escribe algo como:
+
+<Prompt titulo="Probar el Skill de Reportes Semanales">
+Hazme el reporte semanal. Esta semana cerramos el rediseño web antes de tiempo, conseguimos 3 clientes nuevos, pero los leads bajaron 15%. La próxima semana lanzamos campaña de marzo.
+</Prompt>
+
+Claude debería generar un reporte completo con todas las secciones que definiste, las tablas de KPIs, y el formato profesional. Si algo no te gustó, edita tu SKILL.md, vuelve a comprimir y a subir.
+
+Eso es el paso **Ajusta** de la Metodología INICIA — prueba, observa, mejora y repite.
+
+**Prompts para probar tus Skills:**
+
+<Prompt titulo="Probar Skill de Redes Sociales">
+Crea 5 publicaciones para Instagram sobre [tu tema]. Para mi audiencia de [tu audiencia].
+</Prompt>
+
+<Prompt titulo="Probar Skill de Guía de Marca">
+Escribe un email de propuesta comercial para [nombre del cliente].
+</Prompt>
+
+<Prompt titulo="Probar combinación de Skills">
+Crea el reporte semanal y también dame 3 ideas de posts para compartir los logros en LinkedIn.
+</Prompt>
+
+</Seccion>
+
+<Seccion titulo="Tips para sacarle el máximo provecho" numero={7}>
+
+Ya sabes qué son los Skills y cómo crearlos. Estos tips van a hacer que funcionen realmente bien:
+
+**Tip 1: La descripción lo es todo**
+
+La parte más importante de tu Skill es la descripción en la metadata. Claude la lee para decidir si activa tu Skill o no.
+
+❌ Vaga: "Ayuda con documentos"
+
+✅ Clara: "Aplica formato de reportes financieros con portada corporativa, tabla de contenidos y disclaimer legal en footer"
+
+Si Claude no está usando tu Skill cuando debería, lo primero que debes revisar es la descripción. Hazla más específica.
+
+**Tip 2: Un Skill, un propósito**
+
+No intentes meter todo en un solo Skill gigante. Es mejor tener varios Skills enfocados que uno que intenta hacer de todo.
+
+❌ Un Skill que maneja: marca + emails + reportes + redes sociales
+
+✅ Cuatro Skills separados: marca, emails, reportes, redes sociales
+
+¿Por qué? Porque Claude puede combinar varios Skills al mismo tiempo. Si le pides "crea un reporte semanal con mi marca", usará tu Skill de reportes Y tu Skill de marca juntos. Pero solo si son Skills separados.
+
+**Tip 3: Incluye ejemplos siempre**
+
+Los ejemplos son lo que hace que un Skill pase de "bueno" a "excelente". Incluye en tus instrucciones:
+
+Ejemplos de lo que SÍ quieres (el resultado ideal) y ejemplos de lo que NO quieres (errores comunes a evitar).
+
+Esto es exactamente el paso **Ilustra con ejemplos** de nuestra Metodología INICIA — y aplica perfecto aquí. Un ejemplo concreto vale más que diez párrafos de reglas.
+
+**Tip 4: Prueba y ajusta**
+
+Tu primer Skill probablemente no será perfecto. Y está bien. Pruébalo con diferentes tipos de tareas, observa qué funciona y qué no, y ajusta las instrucciones.
+
+Puedes editar tu Skill en cualquier momento: descarga el ZIP, modifica el archivo SKILL.md, vuelve a comprimirlo y súbelo de nuevo.
+
+Este ciclo de prueba y ajuste es el paso **Ajusta e itera** de la Metodología INICIA. La misma lógica que usas para mejorar tus prompts aplica para mejorar tus Skills.
+
+**Tip 5: Empieza simple**
+
+No intentes crear un Skill súper complejo de entrada. Empieza con algo básico — como tu tono de marca o un formato de email — y ve agregando instrucciones conforme descubras qué necesitas.
+
+Un Skill de 20 líneas bien escritas le gana a uno de 200 líneas confusas.
+
+</Seccion>
+
+<Conclusion>
+Los Skills de Claude son una de esas funciones que, una vez que empiezas a usar, te preguntas cómo trabajabas sin ellas.
+
+Hagamos un repaso rápido:
+
+Los Skills son carpetas de instrucciones que le enseñan a Claude cómo hacer tareas específicas a tu manera. Ya vienen incluidos Skills para crear archivos de Excel, PowerPoint, Word y PDF. El Directorio de Skills tiene habilidades de partners como Notion, Canva, Figma y Atlassian. Puedes crear los tuyos — pidiéndole a Claude que te ayude o escribiéndolos tú mismo. Y se combinan automáticamente — Claude puede usar varios Skills juntos para tareas complejas.
+
+**El siguiente paso:** Crea tu primer Skill. Empieza con algo simple — tu guía de marca, tu formato de emails o la estructura de tus reportes — y experimenta desde ahí.
+
+¿Recuerdas la Metodología INICIA? Los mismos principios que usas para escribir buenos prompts — Identifica tu objetivo, Nutre con contexto, Indica formato, Controla con restricciones, Ilustra con ejemplos, y Ajusta — son exactamente los que hacen que un buen Skill sea excelente.
+
+La diferencia: con un prompt enseñas a Claude una vez. Con un Skill, Claude aprende para siempre.
+</Conclusion>
+
+<CTAFinal 
+  videoUrl="[PENDIENTE - LINK DEL VIDEO DE SKOOL]"
+  comunidadUrl="https://www.skool.com/inicia-con-ia-5423"
+/>

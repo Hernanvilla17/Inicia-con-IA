@@ -1,0 +1,280 @@
+---
+titulo: "Automatización Práctica con Make y n8n — Tu Primer Flujo Paso a Paso"
+descripcion: "Aprende a crear automatizaciones reales con Make y n8n. Dos ejemplos prácticos: uno sin IA y otro con IA para generar imágenes automáticamente."
+categoria: "Automatización"
+minutosLectura: 14
+autor: "Inicia con IA"
+thumbnail: "/guias/imagenes/automatizacion-make-n8n-thumbnail.jpg"
+---
+
+<Intro>
+Imagina que todos los días haces lo mismo en tu computadora: recibes un email, descargas el archivo adjunto, lo guardas en una carpeta, y lo anotas en una hoja de cálculo. ¿Y si todo eso pasara solo, sin que tú muevas un dedo?
+
+Eso es exactamente lo que hacen **Make** y **n8n**: son plataformas que conectan tus aplicaciones favoritas para que trabajen juntas automáticamente. Tú les dices "cuando pase esto, haz aquello" — y ellas lo hacen por ti, las 24 horas del día, los 7 días de la semana.
+
+No necesitas saber programar. No necesitas ser experto en tecnología. Solo necesitas entender qué quieres automatizar — y estas herramientas se encargan del resto.
+
+En esta guía vas a ver dos ejemplos reales funcionando:
+
+- **Ejemplo 1 con Make (sin IA):** Un flujo que organiza automáticamente las facturas que te llegan por email.
+- **Ejemplo 2 con n8n (con IA):** Un flujo que genera imágenes con inteligencia artificial desde un simple formulario.
+
+¿Listo? Vamos paso a paso.
+</Intro>
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-logos.png" alt="Logos de Make y n8n lado a lado" caption="Make y n8n: dos plataformas de automatización con personalidades distintas" />
+
+<Seccion titulo="Make vs n8n — ¿Cuál usar?" numero={1}>
+
+Antes de meternos a los ejemplos, vamos a entender la diferencia entre estas dos herramientas. Porque aunque las dos hacen automatizaciones, cada una tiene su personalidad.
+
+**Make** es como armar un diagrama con piezas de LEGO. Todo es visual: arrastras los bloques, los conectas con flechitas, y listo. Es ideal para empezar porque la interfaz es muy intuitiva. Si nunca has hecho una automatización, Make es tu mejor amigo para dar los primeros pasos.
+
+**n8n** es como Make pero con superpoderes. También es visual, pero te permite hacer cosas más avanzadas — como conectar inteligencia artificial, agregar lógica compleja (tipo "si pasa esto, haz A; si no, haz B"), y trabajar con APIs externas. Es un poco más técnico, pero el poder que te da es impresionante.
+
+**¿Cuál deberías elegir?** Depende de lo que necesites:
+
+| | Make | n8n |
+|---|---|---|
+| **Ideal para** | Principiantes, automatizaciones simples | Usuarios que quieren más control y potencia |
+| **Interfaz** | Muy visual, súper intuitiva | Visual también, pero con más opciones técnicas |
+| **IA integrada** | Básica | Muy potente — conecta con OpenAI, APIs de IA, etc. |
+| **Precio para empezar** | Gratis (1,000 operaciones/mes) | Gratis (versión local) o desde ~$20/mes en la nube |
+| **Lo mejor** | Facilidad de uso | Flexibilidad y poder |
+
+La buena noticia es que no tienes que elegir solo una. Muchas personas usan Make para cosas sencillas y n8n cuando necesitan algo más potente. En esta guía vas a probar las dos.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-comparativa.png" alt="Infografía comparando Make vs n8n visualmente" caption="Make: simplicidad visual. n8n: potencia y flexibilidad" />
+
+</Seccion>
+
+<Seccion titulo="Ejemplo 1 (Make): Organiza tus facturas automáticamente" numero={2}>
+
+Vamos con nuestro primer ejemplo práctico. Este es un flujo **sin inteligencia artificial** — es automatización pura: conectar aplicaciones para que hagan trabajo repetitivo por ti.
+
+**El problema que resolvemos:**
+
+Te llegan facturas por email todo el tiempo. Cada vez que recibes una, tienes que abrir el correo, descargar el PDF, subirlo a una carpeta de Google Drive, y a veces anotarlo en algún lado. Es tedioso y se te puede olvidar.
+
+**La solución automatizada:**
+
+Vamos a crear un flujo en Make que haga todo esto solo:
+
+1. 📧 **Detectar email con factura** — Gmail detecta que te llegó un email con un archivo adjunto
+2. 📎 **Extraer adjunto** — Make descarga el archivo adjunto del email
+3. 💾 **Guardar en Drive** — El archivo se sube automáticamente a tu carpeta de Google Drive
+4. 📋 **Registrar en Google Sheets** — Se agrega una fila con la fecha, el remitente, el asunto, el nombre del archivo y el link de descarga
+
+Resultado: cada factura que te llegue queda organizada y registrada sin que hagas nada.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-make-flujo-facturas.png" alt="Escenario completo en Make con los 4 módulos conectados" caption="Los 4 módulos del flujo: Detectar → Extraer → Guardar → Registrar" />
+
+**Paso a paso para armarlo:**
+
+**Paso 1 — Crea tu cuenta en Make**
+
+Entra a make.com y crea una cuenta gratuita. No necesitas tarjeta de crédito. El plan gratuito te da 1,000 operaciones al mes, que es más que suficiente para practicar.
+
+**Paso 2 — Crea un nuevo escenario**
+
+En Make, las automatizaciones se llaman "escenarios". Haz clic en "Create a new scenario" para empezar. Ponle un nombre descriptivo como "📧 Facturas automáticas: Email → Drive → Sheets".
+
+**Paso 3 — Agrega el módulo de Gmail (Watch Emails)**
+
+Busca "Gmail" y selecciona el trigger "Watch Emails". Esto le dice a Make: "vigila mi bandeja de entrada". En la configuración activa "Only emails with attachments/media" en **Yes** para que solo detecte emails con archivos adjuntos, y pon "Content format" en **Full content**.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-make-gmail-config.png" alt="Configuración del módulo Gmail en Make con filtro de adjuntos activado" caption="Activa 'Only emails with attachments/media: Yes' y 'Content format: Full content'" />
+
+<Alerta tipo="tip">
+**Importante:** Para conectar Gmail necesitas crear credenciales OAuth en Google Cloud Console (Client ID y Client Secret). Es un paso extra, pero solo lo haces una vez.
+</Alerta>
+
+**Paso 4 — Agrega el módulo de Gmail (List email attachments)**
+
+Necesitas un segundo módulo de Gmail llamado "List email attachments and media". Conéctalo y mapea el ID del email que viene del módulo anterior. Este módulo es el que extrae el archivo adjunto real.
+
+**Paso 5 — Agrega Google Drive (Upload a File)**
+
+Conecta el siguiente módulo: "Google Drive → Upload a File". Selecciona la carpeta donde quieres guardar los archivos (crea una carpeta llamada "Facturas Automaticas"). En el campo "File Name" mapea el nombre del archivo del módulo de attachments. En "Data" mapea los datos del archivo.
+
+**Paso 6 — Agrega Google Sheets (Add a Row)**
+
+Agrega un último módulo: "Google Sheets → Add a Row". Crea previamente una hoja llamada "Registro de Facturas" con estas columnas: Fecha | Remitente | Asunto | Nombre del archivo | Link de Google Drive. Conecta cada campo con los datos correspondientes.
+
+<Alerta tipo="tip">
+**Tip de formato:** Para la fecha, usa la fórmula `formatDate(2.Date; "DD/MM/YYYY HH:mm"; "America/Mexico_City")` (con dobles llaves alrededor) para que se vea legible en tu zona horaria.
+</Alerta>
+
+**Paso 7 — Configura la frecuencia y activa**
+
+En "Schedule settings", selecciona "At regular intervals" y ponle **15 minutos** (mínimo en el plan gratuito). Activa el escenario con el toggle.
+
+**Paso 8 — Prueba el flujo**
+
+Envíate un email con un PDF adjunto y espera a que Make lo detecte, o usa "Run once" para probarlo al instante.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-make-resultado-sheets.png" alt="Google Sheets Registro de Facturas con filas automáticas" caption="Cada factura queda registrada automáticamente con fecha, remitente y link" />
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-make-resultado-drive.png" alt="Carpeta Facturas Automaticas en Google Drive con PDFs guardados" caption="Los archivos aparecen en tu Drive sin que hayas hecho nada" />
+
+**¿Qué acabas de lograr?**
+
+Creaste un asistente digital que trabaja por ti. Cada vez que te llegue un email con adjunto, Make se encarga de todo. Sin intervención tuya, sin olvidar nada. Esto es solo el inicio — imagina aplicar esta misma lógica a cotizaciones, contratos, recibos, o cualquier documento que te llegue por correo.
+
+</Seccion>
+
+<Seccion titulo="Ejemplo 2 (n8n): Genera imágenes con IA desde un formulario" numero={3}>
+
+Ahora vamos a subir de nivel. Este segundo ejemplo usa **inteligencia artificial** integrada en la automatización. Vas a ver cómo conectar un formulario con un modelo de IA que genera imágenes — todo automático.
+
+**El problema que resolvemos:**
+
+Quieres generar imágenes con IA pero no quieres estar entrando a plataformas, copiando prompts, descargando archivos y subiéndolos a tu Drive manualmente cada vez.
+
+**La solución automatizada:**
+
+Un flujo en n8n que hace esto:
+
+1. 📝 **Nueva solicitud del Form** — Alguien llena un formulario con la imagen que quiere
+2. 🧠 **Mejorar prompt con IA** — OpenAI convierte la descripción simple en un prompt profesional usando la Metodología INICIA
+3. 🎨 **Enviar a Nano Banana** — El prompt se envía a la API de KIE AI para generar la imagen
+4. ⏳ **Verificar estado** + ⏸️ **Esperar** + ✅ **¿Imagen lista?** — El flujo espera a que la imagen se genere (loop cada 10 segundos)
+5. 🏷️ **Generar título con IA** — La IA analiza la imagen y le pone un título descriptivo
+6. 📥 **Descargar imagen** → 💾 **Guardar en Drive** — La imagen se descarga y guarda automáticamente
+7. 📝 **Actualizar hoja con link** — El Google Sheet se actualiza con el link de la imagen
+
+Resultado: llenas un formulario con una idea → la IA la mejora → se genera la imagen → se guarda en Drive → se actualiza tu registro. Todo sin tocar nada más.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-n8n-flujo-completo.png" alt="Flujo completo en n8n con todos los nodos conectados y ejecución exitosa" caption="10 nodos trabajando en cadena: del formulario a Google Drive sin intervención manual" />
+
+**Paso a paso para armarlo:**
+
+**Paso 1 — Prepara tus cuentas**
+
+Necesitas tres cosas: una cuenta de n8n (puedes usar n8n Cloud con prueba gratuita, o instalarlo gratis en tu computadora), una API Key de OpenAI, y una API Key de KIE AI (entra a kie.ai → crea tu cuenta → ve a "API Keys" — tienes 20 generaciones gratis para empezar).
+
+**Paso 2 — Crea el formulario directamente en n8n**
+
+Agrega un nodo de "On form submission" como trigger y configura estos campos: "Describe la imagen que quieres" (tipo: Text), "Estilo" (tipo: Dropdown con opciones: Realista, Informativa, Artística, Minimalista) y "Proporción" (tipo: Dropdown con opciones: 16:9, 1:1, 9:16).
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-n8n-config-formulario.png" alt="Configuración de los campos del formulario en n8n" caption="Define los campos: texto libre para la descripción y dropdowns para estilo y proporción" />
+
+Cuando publiques el workflow, n8n te dará una URL pública donde cualquier persona puede acceder al formulario.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-n8n-formulario.png" alt="Formulario de n8n como lo ve el usuario con campos y botón Submit" caption="El usuario solo ve esto: describe su imagen, elige estilo y proporción, y envía" />
+
+**Paso 3 — Conecta OpenAI para mejorar el prompt**
+
+Agrega un nodo de "OpenAI" (Message a model). Copia este System Prompt exactamente:
+
+<Prompt titulo="System Prompt para el nodo OpenAI (Mejorar prompt con IA)">
+Eres un experto en crear prompts para generación de imágenes con IA. Tu trabajo es tomar la descripción simple del usuario y transformarla en un prompt profesional y detallado en inglés.
+
+Sigue la Metodología INICIA para estructurar el prompt:
+
+- Identifica: ¿Qué tipo de imagen quiere el usuario? (foto, ilustración, arte digital, etc.)
+- Nutre: Agrega contexto visual rico — entorno, iluminación, atmósfera, colores, texturas
+- Indica: Define el estilo visual — realista, cinematográfico, flat design, acuarela, etc.
+- Controla: Respeta el estilo y la proporción que el usuario eligió. No cambies esos parámetros.
+
+Reglas:
+- El prompt final SIEMPRE debe estar en inglés
+- Máximo 150 palabras
+- Sé específico en detalles visuales: ángulo de cámara, tipo de luz, profundidad de campo
+- No incluyas instrucciones negativas (no "sin", "no", "avoid")
+
+FORMATO DE RESPUESTA: Responde ÚNICAMENTE con el texto del prompt mejorado. Sin comillas, sin explicaciones, sin títulos, sin formato JSON, sin markdown. Solo el texto plano directo.
+</Prompt>
+
+En el mensaje del usuario, mapea la descripción y el estilo que vienen del formulario. Configura el Output Format como **Text**.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-n8n-config-openai.png" alt="Nodo OpenAI con system prompt de Metodología INICIA y prompt mejorado en el output" caption="El nodo transforma 'una cafetería bonita' en un prompt profesional en inglés" />
+
+**Paso 4 — Envía el prompt a KIE AI vía HTTP Request**
+
+Agrega un nodo de "HTTP Request" con esta configuración:
+
+<Prompt titulo="Configuración del nodo HTTP Request para KIE AI">
+Método: POST
+URL: https://api.kie.ai/api/v1/playground
+Headers: Authorization: Bearer TU_API_KEY
+Body (JSON):
+{`{
+  "model": "nano-banana-pro",
+  "prompt": "{{ el prompt mejorado por OpenAI }}",
+  "aspect_ratio": "{{ la proporción del formulario }}",
+  "resolution": "2K",
+  "output_format": "png"
+}`}
+</Prompt>
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-n8n-config-kieai.png" alt="Nodo HTTP Request configurado para la API de KIE AI con output taskId exitoso" caption="La API devuelve un taskId que usarás para verificar cuando la imagen esté lista" />
+
+**Paso 5 — Configura el loop de espera**
+
+La imagen no se genera al instante. Necesitas un ciclo que verifique si ya está lista: un HTTP Request GET con el task ID, un nodo "Wait" de 10 segundos, y un nodo "If" que revise si el estado es "success". Si no está lista, regresa a verificar. Si está lista, continúa.
+
+**Paso 6 — Genera título, descarga y guarda**
+
+Agrega un nodo "OpenAI — Analyze Image" que reciba la URL de la imagen y le genere un título descriptivo en español. Luego un HTTP Request para descargar la imagen y finalmente "Google Drive → Upload File" para guardarla con el título como nombre del archivo.
+
+**Paso 7 — Actualiza el registro**
+
+Agrega "Google Sheets → Update Row" para escribir el link de Google Drive en tu hoja de cálculo. Así tienes un registro completo de todas las imágenes generadas.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-resultado-imagen-drive.png" alt="Carpeta Generador de Imágenes en Drive con imágenes y títulos automáticos" caption="Las imágenes aparecen con títulos descriptivos generados por la IA" />
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-resultado-sheet-n8n.png" alt="Google Sheet con registros de imágenes generadas y links de Drive" caption="Cada solicitud queda registrada con todos sus datos y el link de descarga" />
+
+**Paso 8 — Publica y prueba**
+
+Dale clic en "Publish" para activar el workflow. n8n te dará una URL con tu formulario. Ábrelo, describe una imagen como "un gato astronauta flotando en el espacio", selecciona estilo y proporción, y dale submit.
+
+<Alerta tipo="tip">
+**Prueba con estos ejemplos:** "Una cafetería minimalista con luz natural y plantas" o "Un paisaje futurista de una ciudad con edificios orgánicos y vegetación".
+</Alerta>
+
+**¿Qué acabas de lograr?**
+
+Creaste una máquina de generar imágenes con IA. Cualquier persona puede abrir un simple formulario, describir lo que necesita, y el sistema se encarga de todo lo demás: mejorar la descripción, generar la imagen, ponerle nombre, guardarla y registrarla.
+
+<Alerta tipo="info">
+**La Metodología INICIA en acción:** El system prompt que le damos a OpenAI sigue nuestra Metodología INICIA: **Identifica** qué tipo de imagen quiere el usuario, **Nutre** con contexto visual rico, **Indica** el estilo visual, y **Controla** que respete los parámetros elegidos. La metodología funciona incluso dentro de automatizaciones.
+</Alerta>
+
+</Seccion>
+
+<Seccion titulo="¿Cómo empezar? Planes y costos" numero={4}>
+
+Una de las mejores noticias: las dos plataformas tienen opciones gratuitas para que empieces a practicar hoy mismo.
+
+**Make — Plan Gratuito**
+
+Make te ofrece un plan gratuito permanente. No es una prueba de 14 días — es gratis para siempre. Incluye 1,000 operaciones al mes, 2 escenarios activos simultáneos, y acceso a todas las integraciones (más de 2,000 apps). No requiere tarjeta de crédito. Si después necesitas más, los planes de pago arrancan desde aproximadamente $9 al mes.
+
+**n8n — Dos opciones para empezar**
+
+n8n te da dos caminos. La primera opción es n8n Cloud: es la versión en la nube, lista para usar, con prueba gratuita sin tarjeta. Después el plan básico cuesta aproximadamente $20 al mes con 2,500 ejecuciones (una ejecución = una vez que tu flujo corre completo, sin importar cuántos pasos tenga). La segunda opción es instalarlo por tu cuenta: n8n es de código abierto, puedes montarlo en tu propia computadora o en un hosting como Hostinger, DigitalOcean, etc. Es más técnico, pero tienes control total y sin límites de ejecuciones.
+
+<Imagen src="/guias/imagenes/automatizacion-make-n8n-planes.png" alt="Infografía comparando planes Gratis vs Nube Profesional" caption="Empieza gratis con Make o n8n y escala cuando lo necesites" />
+
+</Seccion>
+
+<Conclusion>
+¡Lo lograste! Acabas de ver dos automatizaciones reales funcionando:
+
+Con **Make**, creaste un sistema que organiza automáticamente tus facturas — automatización pura sin IA. Cuatro módulos que te ahorran minutos todos los días sin que hagas nada.
+
+Con **n8n**, fuiste un paso más allá: un formulario simple que activa una cadena de IA que mejora tu descripción, genera la imagen, le pone nombre, la guarda y la registra. Diez nodos trabajando juntos para que solo tengas que describir lo que necesitas.
+
+Y esto es solo la punta del iceberg. Con estas mismas herramientas puedes automatizar respuestas a clientes, reportes semanales que se generan solos, publicaciones en redes sociales desde una hoja de cálculo, seguimiento de leads en tu CRM, y transcripciones de reuniones que se resumen y comparten automáticamente.
+
+La clave es empezar con algo simple (como el ejemplo de Make) e ir creciendo a cosas más potentes (como el ejemplo de n8n). Un flujo a la vez, y antes de que te des cuenta, habrás recuperado horas de tu semana.
+
+**Tu siguiente paso:** Abre make.com o n8n.io, crea tu cuenta gratuita, y replica uno de los ejemplos de esta guía. La mejor forma de aprender automatización es haciendo.
+</Conclusion>
+
+<CTAFinal 
+  videoUrl="PENDIENTE_LINK_SKOOL"
+  comunidadUrl="https://www.skool.com/inicia-con-ia-5423"
+/>

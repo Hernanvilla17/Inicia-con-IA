@@ -1,0 +1,376 @@
+---
+titulo: "ElevenLabs — Convierte Texto en Voz (y Mucho Más) con IA"
+descripcion: "Aprende a usar ElevenLabs desde cero: genera voces realistas, clona tu propia voz, dobla videos y crea música con inteligencia artificial."
+categoria: "Audio"
+minutosLectura: 15
+autor: "Inicia con IA"
+thumbnail: "/guias/imagenes/elevenlabs-thumbnail.jpg"
+---
+
+<Intro>
+Imagina que puedes escribir cualquier texto y que una voz increíblemente realista lo lea por ti. No una voz robótica de esas que suenan a GPS de los 2000 — sino una voz que suena como una persona real, con emociones, pausas naturales y todo.
+
+Eso es ElevenLabs.
+
+Es una plataforma de inteligencia artificial especializada en audio. Su función principal es convertir texto en voz, pero hoy puede hacer mucho más:
+
+- **Generar voces ultra realistas** a partir de texto
+- **Clonar tu propia voz** (sí, la IA habla con TU voz)
+- **Doblar videos a otros idiomas** manteniendo tu voz original
+- **Crear música** con solo describir lo que quieres
+- **Generar efectos de sonido** escribiendo qué necesitas
+
+¿Para qué te sirve en la vida real?
+
+- Crear locuciones para videos sin necesidad de grabar
+- Narrar presentaciones o cursos con voz profesional
+- Doblar tu contenido al inglés (o cualquier idioma) sin hablar ese idioma
+- Generar música de fondo para tus proyectos
+
+Lo mejor: tiene un plan gratuito con el que puedes probar todas estas funciones. En esta guía vas a aprender a usar ElevenLabs desde cero, paso a paso.
+</Intro>
+
+<Imagen src="/guias/imagenes/elevenlabs-hero.png" alt="Ilustración de texto transformándose en audio con ondas de sonido" caption="ElevenLabs convierte texto en audio con voces ultra realistas" />
+
+<Seccion titulo="Cómo crear tu cuenta y primer audio" numero={1}>
+
+Crear una cuenta en ElevenLabs es súper rápido. Solo necesitas un email o tu cuenta de Google.
+
+**Paso 1:** Ve a [elevenlabs.io](https://elevenlabs.io) y haz clic en "Get Started Free".
+
+**Paso 2:** Regístrate con tu cuenta de Google, o con tu email y una contraseña.
+
+**Paso 3:** Confirma tu email si te lo piden.
+
+**Paso 4:** ¡Listo! Ya estás dentro.
+
+**Sobre el plan gratuito:** Te da créditos mensuales gratis para usar text to speech, explorar voces, probar clonación y más. No necesitas tarjeta de crédito.
+
+**Tu primer audio:**
+
+Apenas entres, vas a ver la pantalla de Text to Speech. Escribe cualquier texto en el cuadro — si no se te ocurre nada, prueba con esto:
+
+<Prompt titulo="Texto de prueba para tu primer audio">
+Hola, esta es mi primera prueba con ElevenLabs. La inteligencia artificial está leyendo este texto con una voz que suena completamente real. Impresionante, ¿no?
+</Prompt>
+
+Selecciona una voz, haz clic en "Generate" y escucha el resultado. Si te gusta, descárgalo con el botón de descarga.
+
+Así de simple. Ya generaste tu primer audio con IA.
+
+<Imagen src="/guias/imagenes/elevenlabs-interfaz-principal.png" alt="Interfaz principal de ElevenLabs mostrando Text to Speech" caption="La pantalla de Text to Speech es lo primero que ves al entrar a ElevenLabs" />
+
+</Seccion>
+
+<Seccion titulo="Text to Speech — Voces, modelos y controles" numero={2}>
+
+Ya generaste tu primer audio. Ahora vamos a entender las opciones que tienes para que tus audios suenen exactamente como quieres.
+
+**Los modelos de voz:**
+
+ElevenLabs tiene varios modelos. Los principales son:
+
+- **Eleven v3** — El más nuevo. Sonido muy expresivo y natural. Puede tener algún bug ocasional por ser reciente.
+- **Eleven Multilingual v2** — Excelente calidad en 29+ idiomas. El más estable. Si estás empezando, este es tu mejor opción.
+- **Eleven Flash v2.5** — Más rápido y económico en créditos. Ideal si necesitas generar mucho contenido.
+
+<Alerta tipo="tip">
+**Tip para principiantes:** Empieza con **Eleven Multilingual v2**. Mejor balance entre calidad y estabilidad.
+</Alerta>
+
+**La biblioteca de voces:**
+
+ElevenLabs tiene más de 5,000 voces disponibles. Para explorarlas, haz clic en el selector de voz. Puedes:
+
+- Escuchar muestras de cada voz con el botón de play
+- Filtrar por idioma (busca "Spanish" para español)
+- Filtrar por género, edad y estilo
+
+**Tips para elegir voces:**
+- Para narración de videos: voces con tono neutro y profesional
+- Para contenido casual: voces más expresivas y energéticas
+- Para español LATAM: filtra por español y escucha las muestras — algunas suenan más "de España" y otras más neutras
+
+<Imagen src="/guias/imagenes/elevenlabs-biblioteca-voces.png" alt="Biblioteca de voces de ElevenLabs con filtros y opciones" caption="Explora más de 5,000 voces y filtra por idioma, género y estilo" />
+
+**Los controles de voz:**
+
+A la derecha del editor vas a ver unos deslizantes. Son simples:
+
+- **Stability (Estabilidad):** Más alto = más uniforme. Más bajo = más expresiva. Para empezar, déjalo en ~50%.
+- **Similarity (Similitud):** Qué tanto se parece al original. Déjalo alto (~75%).
+- **Style (Estilo):** Variación emocional. Para narración normal, déjalo bajo (~20-30%).
+- **Speed (Velocidad):** Qué tan rápido habla.
+
+Los valores por defecto funcionan bien. Ajústalos conforme vayas experimentando.
+
+<Imagen src="/guias/imagenes/elevenlabs-controles-voz.png" alt="Controles de voz de ElevenLabs: Speed, Stability, Similarity" caption="Los controles te permiten ajustar la velocidad, estabilidad y similitud de la voz" />
+
+**Ejemplos de textos para probar:**
+
+<Prompt titulo="Locución para video">
+En este video te voy a mostrar 5 herramientas de inteligencia artificial que van a cambiar tu forma de trabajar.
+</Prompt>
+
+<Prompt titulo="Narración profesional">
+Bienvenidos al reporte trimestral de resultados. A continuación presentamos los puntos más destacados.
+</Prompt>
+
+<Prompt titulo="Contenido para redes">
+¿Sabías que puedes crear una voz con inteligencia artificial que suena igualita a una persona real? Mira esto...
+</Prompt>
+
+</Seccion>
+
+<Seccion titulo="Clona tu propia voz" numero={3}>
+
+Esta es probablemente la función más impresionante de ElevenLabs: puedes clonar tu voz y la IA hablará como tú.
+
+Le das una muestra de audio de tu voz (puede ser tan corta como 30 segundos), y la plataforma crea una versión digital que puede "decir" cualquier texto que le escribas. El resultado es sorprendentemente bueno — a veces cuesta distinguir entre la voz real y la clonada.
+
+**Hay dos tipos de clonación:**
+
+- **Clonación Instantánea:** Rápida (segundos), necesitas solo 30 seg a 5 min de audio, buena calidad. Disponible en plan gratuito.
+- **Clonación Profesional:** Mayor fidelidad, requiere más muestras (30+ min recomendado), tarda más. Para planes de pago.
+
+**Cómo clonar tu voz (Instantánea):**
+
+**Paso 1:** Ve a "Voices" en el menú.
+
+**Paso 2:** Selecciona "Add Voice" → "Instant Voice Clone".
+
+**Paso 3:** Sube un archivo de audio con tu voz. Puede ser una grabación de tu celular, un fragmento de video donde hables, o una nota de voz.
+
+**Paso 4:** Dale un nombre a tu voz y acepta los términos (confirmas que es tu voz o tienes permiso).
+
+**Paso 5:** Haz clic en "Create voice" y espera unos segundos.
+
+¡Listo! Tu voz clonada aparecerá en tu lista de voces y la puedes usar como cualquier otra.
+
+<Imagen src="/guias/imagenes/elevenlabs-voice-clone.png" alt="Pantalla de Instant Voice Clone para subir audio" caption="Sube una muestra de tu voz y ElevenLabs creará un clon digital en segundos" />
+
+**Tips para mejor clonación:**
+
+- Graba en un lugar silencioso — el ruido confunde al modelo
+- Habla de forma natural, no fuerces tu voz
+- Más audio = mejor resultado (aunque con 30 seg funciona)
+- Varía tu tono: incluye preguntas, exclamaciones, pausas
+
+<Alerta tipo="warning">
+**Nota importante:** Solo clona voces para las que tengas permiso. Usar la voz de alguien sin su autorización puede tener consecuencias legales.
+</Alerta>
+
+<Imagen src="/guias/imagenes/elevenlabs-voice-clone-resultado.png" alt="Text to Speech usando la voz clonada de Hernán Villarreal con modelo Eleven v3" caption="Una vez clonada, tu voz aparece como cualquier otra y puedes usarla para generar audio" />
+
+</Seccion>
+
+<Seccion titulo="Dubbing — Dobla videos a otros idiomas" numero={4}>
+
+¿Tienes un video en español y quieres que se escuche en inglés? ElevenLabs puede doblarlo automáticamente y lo más impresionante: mantiene las características de tu voz original.
+
+La IA hace todo automáticamente: escucha tu video, transcribe lo que dices, detecta quién habla, traduce, genera el audio traducido imitando la voz original, y sincroniza todo.
+
+**Paso a paso:**
+
+**Paso 1:** Ve a "Dubbing" en el menú.
+
+**Paso 2:** Sube tu video (o pega un enlace de YouTube).
+
+**Paso 3:** Selecciona idioma original y al que quieres traducir.
+
+**Paso 4:** Haz clic en "Create" y espera unos minutos.
+
+**Paso 5:** Reproduce el resultado. Si necesitas ajustes, el Dubbing Studio te permite editar la traducción y regenerar fragmentos.
+
+ElevenLabs soporta 29+ idiomas: inglés, español, portugués, francés, alemán, japonés, coreano y muchos más.
+
+<Imagen src="/guias/imagenes/elevenlabs-dubbing-crear.png" alt="Pantalla de Create a Dub mostrando opciones de idioma y fuente de audio" caption="Selecciona idioma original, idioma destino y sube tu video o pega un link" />
+
+**Mira este ejemplo real:**
+
+Para esta guía, tomamos un video educativo de Duke University sobre inteligencia artificial — originalmente en inglés — y lo doblamos al español usando la voz clonada de Hernán.
+
+**▶️ Video original (inglés):**
+
+<YouTube url="https://www.youtube.com/watch?v=c0m6yaGlZh4" titulo="What is Artificial Intelligence? | Quick Learner — Duke University" />
+
+**▶️ Video doblado (español con voz clonada):**
+
+<Video src="/guias/imagenes/elevenlabs-dubbing-resultado.mp4" titulo="Video doblado al español con voz clonada de Hernán" />
+
+En menos de 10 minutos, ElevenLabs tradujo completamente este video al español — y lo mejor: usando una voz clonada. El resultado habla por sí solo.
+
+<Imagen src="/guias/imagenes/elevenlabs-dubbing-studio.png" alt="Dubbing Studio de ElevenLabs con línea de tiempo y clips traducidos al español" caption="El Dubbing Studio te permite ver y editar cada fragmento de la traducción" />
+
+**¿Para qué te sirve?**
+- Que tus videos lleguen a audiencias de otros idiomas
+- Crear versiones en inglés de tu contenido en español
+- Traducir presentaciones para clientes internacionales
+
+<Alerta tipo="tip">
+**Tip:** El doblaje consume más créditos. En plan gratuito, prueba con videos cortos (30 seg a 1 min) para aprender cómo funciona.
+</Alerta>
+
+</Seccion>
+
+<Seccion titulo="Música y efectos de sonido con IA" numero={5}>
+
+Además de voces, ElevenLabs puede crear música y efectos de sonido desde texto.
+
+**Eleven Music — Crea música describiendo lo que quieres:**
+
+Ve a "Music", describe la música que necesitas (género, estilo, mood, duración, con/sin voz), y genera. Puedes crear desde melodías de piano relajantes hasta canciones completas con letra en español.
+
+**Escucha este ejemplo:**
+
+Para esta guía, generamos una pista de suspenso cinematográfico con este prompt:
+
+<Prompt titulo="Prompt para música de suspenso">
+Música cinematográfica de suspenso oscuro. Pulsos graves de bajo profundo, cuerdas temblorosas, ritmo sutil de latido de corazón. Tensión que crece lentamente. Sin voces. 90 BPM.
+</Prompt>
+
+<Imagen src="/guias/imagenes/elevenlabs-music-interfaz.png" alt="Interfaz de Eleven Music con prompt de suspenso cinematográfico" caption="Escribe lo que necesitas y Eleven Music genera la pista completa" />
+
+🔊 **Resultado:**
+
+<Audio src="/guias/imagenes/elevenlabs-musica-suspenso.mp3" titulo="Música de suspenso generada con Eleven Music" />
+
+30 segundos de música profesional generada en menos de un minuto. Sin buscar en bancos de audio, sin licencias complicadas — solo describes lo que necesitas y la IA lo crea.
+
+**Sound Effects — Efectos personalizados:**
+
+Ve a "Sound Effects", describe el sonido que necesitas, y la IA genera varias opciones. Perfecto para agregar efectos a videos sin buscar en bancos de audio.
+
+<Alerta tipo="tip">
+**Tip:** Los resultados son mucho mejores cuando tu descripción es específica. "Un sonido de campana" te da algo genérico. "Campana de iglesia antigua, eco largo, tono grave" te da algo preciso.
+</Alerta>
+
+**Prompts para probar:**
+
+<Prompt titulo="Música relajante para meditación">
+Melodía de piano relajante para meditación, tempo lento, 30 segundos
+</Prompt>
+
+<Prompt titulo="Intro energética para YouTube">
+Música electrónica energética para intro de YouTube, 15 segundos, con build-up
+</Prompt>
+
+<Prompt titulo="Canción pop en español">
+Canción pop en español, voz femenina, tema sobre emprender, 2 minutos
+</Prompt>
+
+<Prompt titulo="Efecto whoosh para transición">
+Efecto whoosh futurista para transición de video tech, 2 segundos, sutil
+</Prompt>
+
+<Prompt titulo="Ambiente de lluvia relajante">
+Lluvia cayendo sobre techo de lámina, ambiente relajante, 10 segundos
+</Prompt>
+
+<Prompt titulo="Notificación alegre">
+Notificación de celular alegre y corta, como confirmación de tarea
+</Prompt>
+
+</Seccion>
+
+<Seccion titulo="🎧 Reto: ¿Cuál es la voz real?" numero={6}>
+
+Ahora viene la parte divertida. Vamos a poner a prueba qué tan buena es la clonación de voz de ElevenLabs con un reto real.
+
+Hernán, el creador de Inicia con IA, clonó su voz con ElevenLabs y generó dos audios diferentes. Escúchalos con atención.
+
+**Uno de estos audios es su voz real grabada con micrófono, y el otro es inteligencia artificial usando su voz clonada.**
+
+**¿Puedes adivinar cuál es cuál?**
+
+🔊 **Audio A:**
+
+<Audio src="/guias/imagenes/elevenlabs-voice-clone-reto-1.mp3" titulo="Audio A — Escucha con atención" />
+
+*"La inteligencia artificial ya no es algo del futuro. Hoy cualquier persona puede usar herramientas de IA para escribir mejor, crear imágenes, o incluso clonar su propia voz. Lo más sorprendente es lo fácil que es. No necesitas ser experto en tecnología. Solo necesitas curiosidad y ganas de aprender."*
+
+🔊 **Audio B:**
+
+<Audio src="/guias/imagenes/elevenlabs-voice-clone-reto-2.mp3" titulo="Audio B — Escucha con atención" />
+
+*"Hace unos años, clonar una voz era cosa de películas de ciencia ficción. Hoy lo puedes hacer desde tu computadora en menos de cinco minutos. La inteligencia artificial está cambiando la forma en que trabajamos, creamos y nos comunicamos. Y lo mejor de todo es que apenas estamos viendo el principio."*
+
+<Imagen src="/guias/imagenes/elevenlabs-reto-voz.png" alt="Dos ondas de audio A y B con signo de interrogación" caption="¿Puedes distinguir cuál es la voz real y cuál es IA?" />
+
+Piénsalo un momento antes de seguir leyendo...
+
+---
+
+**🤯 La respuesta:**
+
+**Ambos son inteligencia artificial.**
+
+Sí, leíste bien. Ni el Audio A ni el Audio B son la voz real de Hernán. Los dos fueron generados con ElevenLabs usando su voz clonada. Y la gran mayoría de las personas no puede distinguirlos de una grabación real.
+
+Eso es lo poderoso que es la clonación de voz hoy en día.
+
+**¿Qué aprendemos?**
+
+1. La IA ya puede replicar voces humanas con una fidelidad increíble — tanto que incluso cuando sabes que uno podría ser falso, no puedes notar la diferencia
+2. Puedes grabar videos, podcasts o cursos sin estar frente al micrófono cada vez
+3. También nos recuerda por qué es importante usar esta tecnología de forma responsable — solo con voces propias o con permiso
+
+**¿Quieres intentarlo tú?** Regresa a la Sección 3, clona tu voz, y haz tu propio reto con tus amigos o familia. Te garantizamos que se van a sorprender.
+
+</Seccion>
+
+<Seccion titulo="Tips y Metodología INICIA para ElevenLabs" numero={7}>
+
+Varias funciones de ElevenLabs aceptan instrucciones de texto — música, efectos de sonido, diseño de voces. Aquí es donde nuestra Metodología INICIA te ayuda a obtener mejores resultados.
+
+¿Recuerdas la Metodología INICIA? Vamos a ver cómo aplicar los 4 pasos esenciales en ElevenLabs:
+
+**Ejemplo: generar música con INICIA**
+
+| Paso INICIA | Qué incluir | Ejemplo |
+|-------------|-------------|---------|
+| **I** — Identifica tu objetivo | ¿Qué tipo de música? ¿Para qué? | "Crea una pista de fondo para video de YouTube" |
+| **N** — Nutre con contexto | Género, estilo, mood | "Estilo lo-fi hip hop, relajante" |
+| **I** — Indica el formato | Duración, con/sin voz, estructura | "Instrumental, 60 segundos, con intro suave" |
+| **C** — Controla con restricciones | Qué evitar | "Sin cambios bruscos de ritmo. Sin voces" |
+
+**Prompt combinado usando INICIA:**
+
+<Prompt titulo="Música lo-fi con Metodología INICIA">
+Crea una pista lo-fi hip hop relajante para fondo de video de YouTube. Instrumental, 60 segundos, con intro suave que funcione como loop. Sin cambios bruscos de ritmo ni partes agresivas.
+</Prompt>
+
+Ese prompt usa los 4 pasos esenciales de INICIA y te da un resultado mucho más preciso que simplemente "música relajante".
+
+<Prompt titulo="Efecto de sonido con INICIA">
+Efecto whoosh futurista y elegante para transición de video tech. 2 segundos. Sin voces. Sutil y moderno, no exagerado.
+</Prompt>
+
+<Prompt titulo="Diseñar una voz con INICIA">
+Voz masculina, adulto joven (25-30 años), español latinoamericano neutro. Tono cálido y cercano, como un amigo explicándote algo. No formal ni robótica.
+</Prompt>
+
+<Alerta tipo="tip">
+**Tip:** Si un resultado no te convence, aplica el paso **Ajusta** de INICIA: escucha lo que generó, identifica qué cambiarías, y modifica tu descripción. "Igual pero más lento" o "Mismo estilo pero con más energía al inicio".
+</Alerta>
+
+<Alerta tipo="info">
+**¿Quieres dominar la Metodología INICIA?** Consulta nuestra guía completa dedicada a ella para aprender a aplicarla en cualquier herramienta de IA.
+</Alerta>
+
+</Seccion>
+
+<Conclusion>
+¡Felicidades! Ya conoces ElevenLabs y sus principales funciones:
+
+✅ **Text to Speech** — Texto a audio con voces ultra realistas
+✅ **5,000+ voces** en 29+ idiomas
+✅ **Clonación de voz** — Tu propia voz digital
+✅ **Dubbing** — Dobla videos manteniendo tu voz
+✅ **Music + Sound Effects** — Crea audio completo con texto
+</Conclusion>
+
+<CTAFinal 
+  videoUrl="[PENDIENTE — LINK DE SKOOL]"
+  comunidadUrl="https://www.skool.com/inicia-con-ia-5423"
+/>
