@@ -88,6 +88,7 @@ export default async function GuiaPage({ params }: PageProps) {
             remarkPlugins: [remarkGfm],
             rehypePlugins: [rehypeSlug, rehypeHighlight],
           },
+          blockJS: false,
         }}
       />
     </GuiaLayout>
