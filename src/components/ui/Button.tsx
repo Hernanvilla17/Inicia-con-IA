@@ -42,7 +42,7 @@ const buttonVariants = {
   initial: { scale: 1 },
   hover: {
     scale: 1.02,
-    transition: { duration: 0.2, ease: "easeOut" }
+    transition: { duration: 0.2, ease: "easeOut" as const }
   },
   tap: {
     scale: 0.98,
@@ -55,7 +55,7 @@ const shineVariants = {
   hover: {
     x: "100%",
     opacity: 1,
-    transition: { duration: 0.5, ease: "easeInOut" }
+    transition: { duration: 0.5, ease: "easeInOut" as const }
   },
 };
 

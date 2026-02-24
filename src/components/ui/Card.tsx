@@ -23,7 +23,7 @@ const hoverAnimations = {
     scale: 1.02,
     transition: {
       duration: 0.3,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
