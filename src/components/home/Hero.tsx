@@ -175,14 +175,13 @@ export default function Hero() {
               </a>
             </motion.div>
 
-            {/* Video with entrance animation - synced with title */}
-            <motion.div
+            {/* Video with entrance animation - synced with title (temporarily hidden) */}
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
               className="relative aspect-video rounded-xl overflow-hidden border border-[#27272A] bg-[#18181B]"
             >
-              {/* Video placeholder */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.button
                   initial={{ scale: 0, opacity: 0 }}
@@ -201,10 +200,8 @@ export default function Hero() {
                   </svg>
                 </motion.button>
               </div>
-
-              {/* Gradient overlay for visual interest */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#09090B]/50 to-transparent pointer-events-none" />
-            </motion.div>
+            </motion.div> */}
 
             {/* Stats below video - with scroll-triggered animations */}
             <motion.div

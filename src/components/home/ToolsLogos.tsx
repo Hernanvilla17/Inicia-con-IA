@@ -17,7 +17,7 @@ export default function ToolsLogos() {
   const allTools = [...tools, ...tools];
 
   return (
-    <section className="py-12 bg-[#09090B] border-y border-[#27272A]">
+    <section className="py-12 bg-[#09090B] border-y border-[#27272A]" style={{ display: "none" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-[#71717A] text-sm mb-8">
           Aprende a usar estas y muchas más herramientas

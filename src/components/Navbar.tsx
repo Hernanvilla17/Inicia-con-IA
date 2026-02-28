@@ -10,8 +10,8 @@ import { SKOOL_URL } from "@/config/skool";
 const navLinks = [
   { href: "/guias", label: "Guías" },
   { href: "/metodologia", label: "Metodología Inicia" },
-  { href: "/blog", label: "Blog" },
-  { href: "/nosotros", label: "Nosotros" },
+  // { href: "/blog", label: "Blog" },        // temporarily hidden
+  // { href: "/nosotros", label: "Nosotros" }, // temporarily hidden
 ];
 
 export default function Navbar() {
