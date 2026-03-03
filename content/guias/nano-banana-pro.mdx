@@ -1,6 +1,6 @@
 ---
-titulo: "Introducción a Nano Banana Pro — Crea Imágenes con IA de Google"
-descripcion: "Aprende qué es Nano Banana Pro, el generador de imágenes de Google, y cómo crear tu primera imagen desde Gemini o Flow."
+titulo: "Guía de Nano Banana — Crea Imágenes con IA de Google (Actualizado 2026)"
+descripcion: "Aprende qué es Nano Banana, el generador de imágenes de Google. Descubre Nano Banana 2, el nuevo modelo por defecto, y cómo crear tu primera imagen desde Gemini o Flow."
 categoria: "Imagen"
 minutosLectura: 8
 autor: "Inicia con IA"
@@ -10,40 +10,45 @@ thumbnail: "/guias/imagenes/nano-banana-pro-thumbnail.jpg"
 <Intro>
 ¿Sabías que puedes crear imágenes con inteligencia artificial directamente desde Google? No necesitas instalar nada, ni pagar por una herramienta extra, ni ser diseñador.
 
-Se llama **Nano Banana Pro**, y es el generador de imágenes de Google. Funciona dentro de Gemini (el asistente de IA de Google) y también desde una herramienta llamada Flow.
+Se llama **Nano Banana**, y es la familia de generadores de imágenes de Google. Funciona dentro de Gemini (el asistente de IA de Google) y también desde una herramienta llamada Flow. Y desde febrero de 2026, el nuevo modelo por defecto es **Nano Banana 2**.
 
 En esta guía introductoria vas a aprender qué es, cómo funciona y cómo crear tu primera imagen paso a paso. Es súper fácil — literalmente le describes lo que quieres y la IA lo genera por ti.
 
 <Alerta tipo="info">
-**Nota:** Esta es una guía de introducción. Más adelante tendremos una guía avanzada donde exploraremos edición de imágenes, estilos creativos y funciones profesionales.
+**Nota:** Esta es una guía de introducción actualizada con los cambios de Nano Banana 2 (febrero 2026). Más adelante tendremos una guía avanzada donde exploraremos Nano Banana Pro en profundidad, edición de imágenes, estilos creativos y funciones profesionales.
 </Alerta>
 </Intro>
 
-<Seccion titulo="¿Qué es Nano Banana Pro?" numero={1}>
+<Seccion titulo="¿Qué es Nano Banana?" numero={1}>
 
-Nano Banana Pro es el **modelo de generación de imágenes de Google**. Piensa en él como el "artista" que vive dentro de las herramientas de Google y que puede crear imágenes a partir de texto.
+Nano Banana es la **familia de modelos de generación de imágenes de Google**. Piensa en ella como el "artista" que vive dentro de las herramientas de Google y que puede crear imágenes a partir de texto.
 
-Le escribes algo como *"un gato astronauta flotando en el espacio con un fondo de estrellas"* y Nano Banana Pro genera esa imagen para ti. Así de simple.
+Le escribes algo como *"un gato astronauta flotando en el espacio con un fondo de estrellas"* y Nano Banana genera esa imagen para ti. Así de simple.
 
 **¿De dónde viene el nombre?**
 
-El nombre "Nano Banana" es el apodo interno que Google le puso a su tecnología de generación de imágenes. Hay dos versiones:
+El nombre "Nano Banana" es el apodo interno que Google le puso a su tecnología de generación de imágenes. Actualmente hay tres versiones:
 
-- **Nano Banana** → la versión rápida y ligera (basada en Gemini 2.5 Flash). Genera imágenes en segundos, ideal para cosas casuales y rápidas.
-- **Nano Banana Pro** → la versión avanzada (basada en Gemini 3 Pro). Genera imágenes con más detalle, mejor texto dentro de la imagen y calidad profesional.
+- **Nano Banana** (original) → la primera versión, basada en Gemini 2.5 Flash. Fue la versión rápida y ligera, pero ya quedó reemplazada por Nano Banana 2.
+- **Nano Banana 2** (NUEVO, el modelo por defecto) → basado en Gemini 3.1 Flash Image. Combina la velocidad de Flash con capacidades que antes eran exclusivas de Pro. Es el nuevo modelo por defecto en Gemini, Flow, Search y Ads.
+- **Nano Banana Pro** → sigue existiendo como la versión premium, basada en Gemini 3 Pro. Genera imágenes con el máximo detalle y calidad. Disponible para suscriptores de Google AI Pro y Ultra a través del menú de 3 puntos → "Redo with Pro".
 
-**¿Qué puede hacer Nano Banana Pro?**
+**¿Qué puede hacer Nano Banana?**
 
 - Crear imágenes desde cero con solo describirlas en texto
 - Generar texto legible dentro de las imágenes (pósters, infografías, logos)
 - Editar fotos existentes (cambiar fondos, agregar elementos, modificar estilos)
 - Combinar varias imágenes en una sola composición
 - Crear imágenes en distintos estilos: fotografía realista, ilustración, flat design, arte, etc.
-- Generar imágenes en alta resolución (hasta 4K)
+- Generar imágenes en alta resolución (desde 512px hasta 4K)
+- Mantener la apariencia de hasta 5 personajes y 14 objetos entre varias imágenes (subject consistency, nuevo en Nano Banana 2)
+- Más aspect ratios nativos, incluyendo formatos ultra-anchos como 4:1 y 8:1
+- Traducir y localizar texto dentro de la imagen a diferentes idiomas
+- Verificación automática con SynthID + C2PA para identificar contenido generado por IA
 
-Lo mejor de todo: **puedes usarlo gratis** con tu cuenta de Google, directamente desde Gemini. Tiene un límite de generaciones gratuitas, y cuando lo alcanzas, cambia automáticamente a la versión Nano Banana (la más rápida pero menos detallada).
+Lo mejor de todo: **puedes usarlo gratis** con tu cuenta de Google, directamente desde Gemini. Nano Banana 2 tiene un límite de aproximadamente 20 generaciones diarias gratis. Los usuarios de planes pagos obtienen más: 1K generaciones gratis, 2K para suscriptores de Google AI Pro, y 4K solo en Ultra.
 
-<Imagen src="/guias/imagenes/nano-banana-pro-ejemplo-imagen-generada.png" alt="Ejemplo de imagen generada por Nano Banana Pro en Gemini" caption="Nano Banana Pro genera imágenes de alta calidad directamente en el chat de Gemini" />
+<Imagen src="/guias/imagenes/nano-banana-pro-ejemplo-imagen-generada.png" alt="Ejemplo de imagen generada por Nano Banana Pro en Gemini" caption="Nano Banana genera imágenes de alta calidad directamente en el chat de Gemini" />
 
 </Seccion>
 
@@ -51,31 +56,31 @@ Lo mejor de todo: **puedes usarlo gratis** con tu cuenta de Google, directamente
 
 Si ya leíste nuestra guía de Gemini, esto te va a hacer mucho sentido.
 
-**Gemini** es el asistente de IA de Google — le puedes hacer preguntas, pedirle que escriba cosas, analice documentos y más. Pues Nano Banana Pro es la parte de Gemini que se encarga específicamente de **crear y editar imágenes**.
+**Gemini** es el asistente de IA de Google — le puedes hacer preguntas, pedirle que escriba cosas, analice documentos y más. Pues Nano Banana es la parte de Gemini que se encarga específicamente de **crear y editar imágenes**.
 
 Piénsalo así:
 
 - **Gemini** = el cerebro general (entiende texto, responde preguntas, analiza)
-- **Nano Banana Pro** = el artista dentro de Gemini (genera y edita imágenes)
+- **Nano Banana 2** = el artista por defecto dentro de Gemini (genera y edita imágenes)
 
-No son herramientas separadas. Nano Banana Pro vive *dentro* de Gemini. Cuando tú le pides a Gemini que cree una imagen, Gemini activa a Nano Banana Pro para hacerlo.
+No son herramientas separadas. Nano Banana vive *dentro* de Gemini. Cuando tú le pides a Gemini que cree una imagen, Gemini activa a Nano Banana 2 para hacerlo.
 
-**¿Cómo accedes a Nano Banana Pro?**
+**¿Cómo accedes a Nano Banana?**
 
 Hay dos formas principales:
 
-1. **Desde Gemini** → En gemini.google.com o la app de Gemini. Seleccionas "Crear imágenes" (el ícono del plátano 🍌) y listo.
-2. **Desde Flow** → En labs.google/fx/tools/flow. Es una herramienta más avanzada de Google Labs enfocada en creación visual y video.
+1. **Desde Gemini** → En gemini.google.com o la app de Gemini. Seleccionas "Crear imágenes" (el ícono del plátano 🍌) y eliges entre los modos Fast, Thinking o Pro — todos usan Nano Banana 2 por defecto. Si eres suscriptor de Google AI Pro o Ultra, puedes regenerar con Nano Banana Pro usando el menú de 3 puntos → "Redo with Pro".
+2. **Desde Flow** → En labs.google/fx/tools/flow. Es una herramienta más avanzada de Google Labs enfocada en creación visual y video. Nano Banana 2 es ahora el modelo por defecto en Flow y funciona a **cero créditos** para todos los usuarios de Flow.
 
 En esta guía nos vamos a enfocar en la forma más fácil: **crear imágenes directamente desde Gemini**.
 
-<Imagen src="/guias/imagenes/nano-banana-pro-diagrama-gemini.png" alt="Diagrama que muestra la relación entre Gemini y Nano Banana Pro" caption="Gemini es el cerebro general y Nano Banana Pro es el artista que genera imágenes" />
+<Imagen src="/guias/imagenes/nano-banana-pro-diagrama-gemini.png" alt="Diagrama que muestra la relación entre Gemini y Nano Banana" caption="Gemini es el cerebro general y Nano Banana 2 es el artista que genera imágenes por defecto" />
 
 </Seccion>
 
 <Seccion titulo="Crea tu primera imagen desde Gemini" numero={3}>
 
-Vamos a lo práctico. Sigue estos pasos para crear tu primera imagen con Nano Banana Pro.
+Vamos a lo práctico. Sigue estos pasos para crear tu primera imagen con Nano Banana.
 
 **Paso 1: Entra a Gemini**
 
@@ -85,14 +90,15 @@ Ve a [gemini.google.com](https://gemini.google.com) e inicia sesión con tu cuen
 
 En la barra de herramientas, busca el ícono del plátano 🍌 que dice **"Crear imágenes"** y haz clic ahí.
 
-Vas a ver dos opciones de modelo:
+Vas a ver tres modos disponibles — todos usan **Nano Banana 2** por defecto:
 
-- **Fast** → Usa Nano Banana (la versión rápida). Genera imágenes en segundos.
-- **Thinking** → Usa Nano Banana Pro (la versión avanzada). Tarda un poco más pero la calidad es notablemente mejor.
+- **Fast** → Genera imágenes en segundos. Ideal para cosas rápidas.
+- **Thinking** → Se toma un momento para "pensar" antes de generar. Suele dar resultados más creativos.
+- **Pro** → Más profundidad en la generación. Útil para prompts complejos.
 
-Para esta primera prueba, selecciona **"Thinking"** para usar Nano Banana Pro.
+Elige el modo según la velocidad y profundidad que necesites. Para esta primera prueba, cualquiera funciona bien — te recomendamos **Fast** para empezar rápido.
 
-<Imagen src="/guias/imagenes/nano-banana-pro-crear-imagenes-menu.png" alt="Menú de herramientas de Gemini mostrando la opción Crear imágenes" caption="Busca el ícono del plátano 🍌 en las herramientas de Gemini para activar la generación de imágenes" />
+<Imagen src="/guias/imagenes/nano-banana-pro-crear-imagenes-menu.png" alt="Menú de herramientas de Gemini mostrando la opción Crear imágenes con Nano Banana 2" caption="Busca el ícono del plátano 🍌 en las herramientas de Gemini. Todos los modos ahora usan Nano Banana 2 por defecto." />
 
 **Paso 3: Escribe lo que quieres**
 
@@ -102,7 +108,7 @@ En el cuadro de texto, describe la imagen que quieres. Por ejemplo:
 
 **Paso 4: Espera el resultado**
 
-Dale enviar y espera unos segundos. Nano Banana Pro va a generar tu imagen. Si no te gusta el resultado, puedes pedirle cambios directamente en el chat, como si le hablaras a una persona:
+Dale enviar y espera unos segundos. Nano Banana 2 va a generar tu imagen. Si no te gusta el resultado, puedes pedirle cambios directamente en el chat, como si le hablaras a una persona:
 
 > *"Hazla más cálida, con tonos anaranjados en la luz"*
 > *"Quita la laptop y pon una libreta en su lugar"*
@@ -110,7 +116,7 @@ Dale enviar y espera unos segundos. Nano Banana Pro va a generar tu imagen. Si n
 
 ¡Eso es todo! Ya creaste tu primera imagen con IA.
 
-<Imagen src="/guias/imagenes/nano-banana-pro-resultado-imagen.png" alt="Resultado de generación de imagen en Gemini con Nano Banana Pro" caption="Nano Banana Pro puede crear desde fotos realistas hasta logos y diseños" />
+<Imagen src="/guias/imagenes/nano-banana-pro-resultado-imagen.png" alt="Resultado de generación de imagen en Gemini con Nano Banana Pro" caption="Nano Banana 2 puede crear desde fotos realistas hasta logos y diseños" />
 
 Estos prompts están escritos aplicando la **Metodología INICIA**. Fíjate cómo cada uno incluye los pasos esenciales:
 
@@ -148,9 +154,9 @@ Diseña un póster para un evento de tecnología llamado "Tech Summit 2025". Est
 
 <Seccion titulo="Conoce Flow: el estudio creativo de Google" numero={4}>
 
-Además de Gemini, hay otro lugar donde puedes usar Nano Banana Pro: **Flow**.
+Además de Gemini, hay otro lugar donde puedes usar Nano Banana: **Flow**.
 
-Flow es una herramienta de Google Labs que está pensada principalmente para crear **videos con IA**, pero también te permite generar y editar imágenes usando Nano Banana Pro.
+Flow es una herramienta de Google Labs que está pensada principalmente para crear **videos con IA**, pero también te permite generar y editar imágenes. Y la gran noticia: desde febrero de 2026, Nano Banana 2 funciona en Flow a **cero créditos** para todos los usuarios.
 
 **¿Dónde encuentras Flow?**
 
@@ -161,16 +167,17 @@ Entra a: [labs.google/fx/tools/flow](https://labs.google/fx/tools/flow)
 | Característica | Gemini | Flow |
 |---------------|--------|------|
 | Enfoque principal | Chat con IA (texto + imágenes) | Creación visual (imágenes + video) |
+| Modelo de imágenes | Nano Banana 2 (por defecto) | Nano Banana 2 (por defecto) |
 | Crear imágenes | Sí, dentro del chat | Sí, con interfaz dedicada |
 | Crear videos | No | Sí (con Veo) |
 | Ideal para | Generar imágenes rápidas en conversación | Proyectos creativos más elaborados |
-| Acceso | Gratis con cuenta de Google | Requiere suscripción a Google AI Pro o Ultra |
+| Costo de imágenes | Gratis (~20/día), más con suscripción | Gratis (cero créditos con Nano Banana 2) |
 
 **¿Cuándo usar Flow en lugar de Gemini?**
 
 Si lo que quieres es generar una imagen rápida o editar una foto, **Gemini es más que suficiente** y es gratis.
 
-Flow tiene sentido cuando quieres trabajar en proyectos más grandes, como crear videos completos con IA, o cuando necesitas un espacio dedicado para gestionar múltiples imágenes y escenas.
+Flow tiene sentido cuando quieres trabajar en proyectos más grandes, como crear videos completos con IA (usando Veo), o cuando necesitas un espacio dedicado para gestionar múltiples imágenes y escenas. Y ahora que la generación de imágenes con Nano Banana 2 es gratis en Flow, es una opción todavía más atractiva.
 
 Para esta guía introductoria, **Gemini es tu mejor punto de partida**. Flow lo exploraremos a fondo en una guía futura.
 
@@ -180,7 +187,7 @@ Para esta guía introductoria, **Gemini es tu mejor punto de partida**. Flow lo 
 
 <Seccion titulo="Tips para escribir buenos prompts de imagen" numero={5}>
 
-La calidad de la imagen que genera Nano Banana Pro depende directamente de **qué tan bien le describas lo que quieres**. Aquí es donde nuestra **Metodología INICIA** te puede ayudar.
+La calidad de la imagen que genera Nano Banana depende directamente de **qué tan bien le describas lo que quieres**. Aquí es donde nuestra **Metodología INICIA** te puede ayudar.
 
 ¿Recuerdas la Metodología INICIA? Es nuestro sistema de 6 pasos para escribir instrucciones efectivas para la IA. Para generar imágenes, los pasos más importantes son:
 
@@ -225,6 +232,10 @@ Si el primer resultado no es perfecto, no empieces de cero. Pídele cambios espe
 **Pro tip:** Si quieres mejorar tus prompts de imagen, aplica el paso "Ilustra" de nuestra Metodología INICIA — muéstrale un ejemplo de referencia. Puedes subir una foto y decirle "haz algo parecido a esto pero con [tus cambios]".
 </Alerta>
 
+<Alerta tipo="tip">
+**Nuevo en Nano Banana 2:** Ahora puedes pedir que mantenga la apariencia de tus personajes entre varias imágenes (subject consistency). Esto es ideal para crear historias, storyboards o series de contenido visual donde necesitas que un personaje se vea igual en cada imagen.
+</Alerta>
+
 <Imagen src="/guias/imagenes/nano-banana-pro-comparacion-prompts.png" alt="Comparación entre un prompt vago y un prompt específico con Metodología INICIA" caption="La diferencia entre un prompt vago y uno con Metodología INICIA es enorme" />
 
 Aquí tienes más prompts listos para copiar. Todos siguen la Metodología INICIA:
@@ -262,19 +273,20 @@ Crea un diagrama de 4 pasos para hacer un plan de negocios. Los pasos son: 1) Id
 </Seccion>
 
 <Conclusion>
-Ya tienes todo lo que necesitas para empezar a crear imágenes con IA usando Nano Banana Pro.
+Ya tienes todo lo que necesitas para empezar a crear imágenes con IA usando Nano Banana.
 
 Hagamos un resumen rápido:
 
-- **Nano Banana Pro** es el generador de imágenes de Google, integrado dentro de Gemini.
-- Puedes acceder a él desde **gemini.google.com** seleccionando "Crear imágenes" → modelo "Thinking".
-- También existe **Flow** (labs.google/fx/tools/flow) para proyectos más avanzados de imagen y video.
+- **Nano Banana 2** es ahora el modelo por defecto para generar imágenes en Gemini y Flow.
+- Puedes acceder desde **gemini.google.com** seleccionando "Crear imágenes" (🍌) en cualquier modo: Fast, Thinking o Pro.
+- **Nano Banana Pro** sigue disponible para suscriptores de Google AI Pro y Ultra a través del menú de 3 puntos → "Redo with Pro".
+- **Flow** (labs.google/fx/tools/flow) ahora genera imágenes gratis con Nano Banana 2, además de permitir crear videos con Veo.
 - La calidad de tus imágenes depende de qué tan bien describas lo que quieres — aplica la **Metodología INICIA** para escribir mejores prompts.
 - Puedes **editar imágenes de forma conversacional**: pide cambios como si hablaras con un diseñador.
 
 **¿Qué sigue?**
 
-Practica generando imágenes con los prompts de ejemplo que te dejamos. Experimenta con diferentes estilos y temas. Y mantente atento a nuestra **guía avanzada de Nano Banana Pro**, donde vamos a explorar edición de fotos, estilos creativos, combinación de imágenes y mucho más.
+Practica generando imágenes con los prompts de ejemplo que te dejamos. Experimenta con diferentes estilos y temas. Y mantente atento a nuestra **guía avanzada de Nano Banana Pro**, donde vamos a explorar Nano Banana Pro en profundidad, edición de fotos, subject consistency avanzado, estilos creativos, combinación de imágenes y mucho más.
 </Conclusion>
 
 <CTAFinal 
